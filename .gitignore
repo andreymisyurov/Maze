@@ -35,3 +35,5 @@ moc*
 build-Controller-Qt_6_2_4_for_macOS-Debug
 ui_view.h
 .DS_Store
+example_gameoflife
+*.pro.user
