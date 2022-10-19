@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Controller</class>
+ <widget class="QMainWindow" name="Controller">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Controller</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="GraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>500</width>
+      <height>500</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>500</width>
+      <height>500</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>500</width>
+      <height>500</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_build">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>90</y>
+      <width>100</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>build</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>12</y>
+      <width>221</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>mode</string>
+    </property>
+    <widget class="QRadioButton" name="mode_maze">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Maze</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mode_cave">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>30</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cave</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QSlider" name="h_size">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>275</y>
+      <width>211</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>50</number>
+    </property>
+    <property name="value">
+     <number>25</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="w_size">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>225</y>
+      <width>211</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>50</number>
+    </property>
+    <property name="value">
+     <number>25</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>551</x>
+      <y>260</y>
+      <width>60</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>columns</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>210</y>
+      <width>30</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>rows</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_chance_for_born">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>325</y>
+      <width>201</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="value">
+     <number>50</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_born">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>309</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>chance for born</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_h">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>270</y>
+      <width>31</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>25</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_w">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>220</y>
+      <width>31</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>25</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="proc_born">
+    <property name="geometry">
+     <rect>
+      <x>759</x>
+      <y>318</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>50</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_life">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>375</y>
+      <width>200</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>7</number>
+    </property>
+    <property name="value">
+     <number>4</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_dead">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>425</y>
+      <width>200</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>7</number>
+    </property>
+    <property name="value">
+     <number>4</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_delay">
+    <property name="geometry">
+     <rect>
+      <x>589</x>
+      <y>170</y>
+      <width>161</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>100</number>
+    </property>
+    <property name="maximum">
+     <number>1000</number>
+    </property>
+    <property name="value">
+     <number>300</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_life">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>370</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_dead">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>420</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_delay">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>164</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>300</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cave_auto">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>170</y>
+      <width>50</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>auto</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_cell_to_life">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>360</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>cell_to_life</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_cell_to_dead">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>410</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>cell_to_dead</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_open_file">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>90</y>
+      <width>100</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>open file</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="check_open">
+    <property name="geometry">
+     <rect>
+      <x>775</x>
+      <y>95</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_play">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>120</y>
+      <width>100</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>play</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_x_start">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>319</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>none</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_x_finish">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>319</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>none</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_y_start">
+    <property name="geometry">
+     <rect>
+      <x>583</x>
+      <y>319</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>none</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_y_finish">
+    <property name="geometry">
+     <rect>
+      <x>703</x>
+      <y>318</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>none</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_begin">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>309</y>
+      <width>58</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>begin:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_end">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>309</y>
+      <width>58</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>end:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_save">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>120</y>
+      <width>100</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>save</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header>./model/graphicsview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
